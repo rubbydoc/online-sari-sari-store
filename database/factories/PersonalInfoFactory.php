@@ -26,6 +26,6 @@ class PersonalInfoFactory extends Factory
         ];
     }
 }
-//AccountInformation::factory()->create()
+//PersonalInfo::factory()->create()
 //create a new account information and get the user_id by creating factory of User model
-//one to one relationship User and AccountInformation
+//one to one relationship User and PersonalInfo

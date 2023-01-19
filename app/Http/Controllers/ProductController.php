@@ -19,20 +19,21 @@ class ProductController extends Controller
             'category' => $request->category,
             'stocks' => $request->stocks,
             'price' => $request->price,
-            'status' => $request->status
 
         ]);
     }
 
-    public function update(Request $request, Product $product)
+
+
+    public function update(Request $request, $id)
     {
-        return Product::find($product)->update([
+        return Product::find($id)->update([
             'name' => $request->name,
             'category' => $request->category,
             'stocks' => $request->stocks,
             'price' => $request->price,
-            'status' => $request->status
-        ]);
+            ]
+        );
     }
 
     public function destroy(Product $product)
@@ -44,4 +45,6 @@ class ProductController extends Controller
     {
         return $product;
     }
+
+
 }

@@ -14,10 +14,18 @@ class Category extends Model
         'description',
     ];
 
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }
+
+
+
+
+
+
+
+    
 
     // $pro = Category::find(1)->product
     //fetch product from database that has catgory_id 1

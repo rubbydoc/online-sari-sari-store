@@ -10,13 +10,13 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'delivery_address',
+
         'amount',
         'shipping_fee',
         'payment_method'
     ];
 
-    public function product()
+    public function products()
     {
         return $this->belongsToMany(Product::class)
             ->withPivot('date', 'quantity', 'total');
